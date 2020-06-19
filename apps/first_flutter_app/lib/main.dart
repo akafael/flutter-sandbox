@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Bistromatic Today\'s Menu'),
+      home: MyHomePage(title: 'Bistromatica Today\'s Menu'),
     );
   }
 }
@@ -116,6 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
               _fruitList[_randomNumber],
               style: Theme.of(context).textTheme.headline4,
             ),
+            FlatButton(child: Text("Something"))
           ],
         ),
       ),
