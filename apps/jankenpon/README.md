@@ -1,6 +1,6 @@
-# Daily Quotes
+# jankenpon
 
-Inspirational quotes and famous words of wisdom will brighten up your day.
+Rock paper scissors game
 
 ## Getting Started
 
