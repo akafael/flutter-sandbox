@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("images/vintagebg.jpg"), fit: BoxFit.cover)),
-                child: MyHomePage(title: 'Flutter Demo Home Page')
+                child: MyHomePage(title: 'Daily Quote')
           )
     );
   }
@@ -60,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _quoteNumber = 0;
 
   List<String> _quoteList = [
+    "Get New Quote Every Day!",
     "Hope remains even in the most difficult of times … I hope today serves as a reminder that however hard things get, we will meet again\n ~ Vera Lynn ",
     "Uncertainty and expectation are the joys of life. Security is an insipid thing.\n ~ William Congreve"
   ];
@@ -71,7 +72,8 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _quoteNumber = new Random().nextInt(_quoteList.length);
+      var newNumber = new Random().nextInt(_quoteList.length);
+      _quoteNumber = newNumber;
     });
   }
 
@@ -90,35 +92,36 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              _quoteList[_quoteNumber],
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
+      body: Container(
+        padding: EdgeInsets.all(15),
+        width: double.infinity,
+        child: Center(
+          // Center is a layout widget. It takes a single child and positions it
+          // in the middle of the parent.
+          child: Column(
+            // Column is also a layout widget. It takes a list of children and
+            // arranges them vertically. By default, it sizes itself to fit its
+            // children horizontally, and tries to be as tall as its parent.
+            //
+            // Invoke "debug painting" (press "p" in the console, choose the
+            // "Toggle Debug Paint" action from the Flutter Inspector in Android
+            // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
+            // to see the wireframe for each widget.
+            //
+            // Column has various properties to control how it sizes itself and
+            // how it positions its children. Here we use mainAxisAlignment to
+            // center the children vertically; the main axis here is the vertical
+            // axis because Columns are vertical (the cross axis would be
+            // horizontal).
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                _quoteList[_quoteNumber],
+                style: Theme.of(context).textTheme.headline4,
+              ),
+            ],
+          ),
+        )
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
