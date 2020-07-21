@@ -6,7 +6,7 @@ Tutorial Codes and Examples in Flutter.
 
  * [First App](apps/first_flutter_app/): Bare Bone app. Generated as template.
  * [Daily Quotes](apps/daily_quotes/): Show a random quote everyday. Statefull Widjets example.
- * [JokenPo](apps/jankenpo/): Rock Paper Scisor Game. GestureDetection example.
+ * [JokenPo](apps/jankenpon/): Rock Paper Scisor Game. [GestureDetector](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html) example.
 
 ## Reference
 
