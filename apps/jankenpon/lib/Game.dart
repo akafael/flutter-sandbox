@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'dart:math';
 
 class Game extends StatefulWidget {
   @override
   _GameState createState() => _GameState();
 }
-
 
 /// Game Widget Description
 class _GameState extends State<Game> {
@@ -17,7 +17,8 @@ class _GameState extends State<Game> {
     List<String> _gameOptions = ["rock", "paper", "scissor"];
 
     // Generate App Choice
-    var _appChoice = "rock";
+    var newNumber = new Random().nextInt(_gameOptions.length);
+    var _appChoice = _gameOptions[newNumber];
 
     // Check If Even
     if ((playerChoice == "rock" && _appChoice == "rock") ||
