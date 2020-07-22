@@ -1,5 +1,3 @@
-[![Known Vulnerabilities](https://snyk.io/test/github/akafael/flutter-sandbox/badge.svg?targetFile=package.json)](https://snyk.io/test/github/akafael/flutter-sandbox?targetFile=package.json)
-
 # Flutter Sandbox
 
 Tutorial Codes and Examples in Flutter.
