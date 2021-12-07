@@ -17,3 +17,4 @@ Tutorial Codes and Examples in Flutter.
 ## Reference
 
  * [Desenvolvimento Android e IOS com Flutter 2020 - Jamilton Damasceno](https://www.udemy.com/course/desenvolvimento-android-e-ios-com-flutter/)
+ * [Flutter Apprentice](https://www.raywenderlich.com/books/flutter-apprentice/v2.0/)
